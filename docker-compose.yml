@@ -1,0 +1,58 @@
+
+services:
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: todo-mssql
+    environment:
+      SA_PASSWORD: "YourStrong!Passw0rd"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    networks:
+      - todo-network
+    volumes:
+      - mssql-data:/var/opt/mssql
+
+  mssql-init:
+    image: mcr.microsoft.com/mssql-tools
+    depends_on:
+      - mssql
+    volumes:
+      - ./db:/db
+    entrypoint: >
+      /bin/bash -c "
+      sleep 20 &&
+      /opt/mssql-tools/bin/sqlcmd
+      -S mssql
+      -U sa
+      -P YourStrong!Passw0rd
+      -i /db/Todos.sql
+      "
+    networks:
+      - todo-network
+
+  backend:
+    build: ./backend
+    container_name: todo-backend
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mssql
+    networks:
+      - todo-network
+
+  frontend:
+    build: ./frontend/todo-ui
+    container_name: todo-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - todo-network
+
+networks:
+  todo-network:
+
+volumes:
+  mssql-data:

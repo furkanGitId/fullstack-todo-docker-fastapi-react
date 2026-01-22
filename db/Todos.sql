@@ -1,0 +1,13 @@
+CREATE DATABASE cli_todo_db;
+GO
+
+USE cli_todo_db;
+GO
+
+CREATE TABLE Todos
+(
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    Title NVARCHAR(100) NOT NULL,
+    IsCompleted BIT NOT NULL DEFAULT 0,
+    CreatedAt DATETIME NOT NULL DEFAULT GETDATE()
+);
