@@ -320,7 +320,7 @@ You must have the following installed on your system:
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/your-username/fullstack-todo-docker-fastapi-react.git
+   git clone https://github.com/furkanGitId/fullstack-todo-docker-fastapi-react.git
    cd fullstack-todo-docker-fastapi-react
    ```
 
