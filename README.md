@@ -329,7 +329,9 @@ You must have the following installed on your system:
    This command will build the images for the React frontend and FastAPI backend, and start all services (including the SQL Server database).
 
    ```bash
-   docker-compose up --build
+   docker-compose down -v
+   docker-compose build --no-cache
+   docker-compose up
    ```
 
 3. **Access the application**
