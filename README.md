@@ -30,6 +30,16 @@ This project demonstrates real-world full stack development practices including 
 
 ---
 
+<img width="1903" height="534" alt="CLI_Todo_App" src="https://github.com/user-attachments/assets/c687e997-23b9-436c-84ed-9710e94cd7b5" />
+
+<img width="924" height="390" alt="CLI_Todo_App1" src="https://github.com/user-attachments/assets/8bc3d8c5-cdd7-40b7-bde5-db58879a93e7" />
+
+<img width="1045" height="369" alt="CLI_Todo_App2" src="https://github.com/user-attachments/assets/ef5aee19-0726-457e-a7c9-dac0d87b30b8" />
+
+<img width="1029" height="382" alt="CLI_Todo_App3" src="https://github.com/user-attachments/assets/68718dcd-6dca-4d70-b3cc-37ab12be6f54" />
+
+---
+
 ## 📁 Project Structure
 
 ```text
