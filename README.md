@@ -103,6 +103,19 @@ fullstack-todo-docker-fastapi-react/
 
 ---
 
+### `Run Python App`
+```bash
+python -m uvicorn main:app --reload
+python -m uvicorn app.main:app --reload
+```
+
+### `Run React App`
+```bash
+npm start
+```
+
+---
+
 ### `app/main.py`
 
 *   Entry point of the FastAPI application
